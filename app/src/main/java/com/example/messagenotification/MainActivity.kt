@@ -32,7 +32,7 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             MessageNotificationTheme {
-                FirebaseMessagingScreen()
+                    FirebaseMessagingScreen()   
             }
         }
     }

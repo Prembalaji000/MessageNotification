@@ -3,7 +3,6 @@ package com.example.messagenotification.View
 import android.Manifest
 import android.os.Build
 import androidx.annotation.RequiresApi
-import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
@@ -14,11 +13,15 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.paint
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.example.messagenotification.R
 import com.example.messagenotification.View.Component.FirebaseMessagingNotificationPermissionDialog
 import com.example.messagenotification.ui.theme.MessageNotificationTheme
 import com.google.accompanist.permissions.ExperimentalPermissionsApi
@@ -52,12 +55,14 @@ fun FirebaseMessagingScreen() {
     Column(
         modifier = Modifier
             .fillMaxSize()
-            .background(Color.White),
+            .paint(painterResource(id = R.drawable.bgnotification),
+                contentScale = ContentScale.FillBounds),
         verticalArrangement = Arrangement.spacedBy(20.dp, Alignment.CenterVertically),
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
         Text(text = "Hello, main screen", color = Color.Black,
-            fontSize = 30.sp, fontStyle = FontStyle.Italic)
+            fontSize = 30.sp, fontStyle = FontStyle.Normal
+        )
     }
 }
 @RequiresApi(Build.VERSION_CODES.TIRAMISU)

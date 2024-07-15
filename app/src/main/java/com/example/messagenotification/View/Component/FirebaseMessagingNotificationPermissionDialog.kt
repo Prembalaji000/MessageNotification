@@ -46,6 +46,6 @@ fun FirebaseMessagingNotificationPermissionDialog(
 /*icon = {
     Icon(
         painterResource(id = R.drawable.playstore),
-        contentDescription = null
+        contentDescription = "null"
     )
 },*/
