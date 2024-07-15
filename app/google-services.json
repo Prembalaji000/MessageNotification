@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "108468970197",
+    "project_id": "messagenotification-590ed",
+    "storage_bucket": "messagenotification-590ed.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:108468970197:android:02eecc8f648c2495c6f85c",
+        "android_client_info": {
+          "package_name": "com.example.messagenotification"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAQL-QUH5mF4oAsfsVIdtg-32OkTirKkJE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
