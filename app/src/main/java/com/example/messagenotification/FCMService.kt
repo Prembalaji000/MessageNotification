@@ -22,14 +22,13 @@ class FCMService : FirebaseMessagingService() {
         val notificationManager = getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
         val notificationId = 1
         val requestCode = 1
-        val channelId = "Firebase Message ID"
+        val channelId = "Firebase message ID"
         val channelName = "Firebase Messaging"
         if(Build.VERSION.SDK_INT>= Build.VERSION_CODES.O){
             notificationManager.createNotificationChannel(
                 NotificationChannel(channelId, channelName, NotificationManager.IMPORTANCE_HIGH)
             )
         }
-
         val intent = Intent(this, MainActivity::class.java)
         val pendingIntentFlag = if (Build.VERSION.SDK_INT <= Build.VERSION_CODES.M) 0 else PendingIntent.FLAG_IMMUTABLE
         val pendingIntent = PendingIntent.getActivity(this, requestCode, intent, pendingIntentFlag)

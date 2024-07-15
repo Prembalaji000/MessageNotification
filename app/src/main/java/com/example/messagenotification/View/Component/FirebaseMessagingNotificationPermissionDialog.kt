@@ -24,13 +24,13 @@ fun FirebaseMessagingNotificationPermissionDialog(
                 notificationPermissionState.launchPermissionRequest()
             },
             title = { Text(text = "Notification Permission") },
-            text = { Text(text = "Please allow this app to send you a notification") },
+            text = { Text(text = "Please allow this application to send you a notification from firebase") },
             /*icon = {
                 Icon(
-                    painter = painterResource(id = R.drawable.playstore),
+                    painter = painterResource(id = R.drawable.snapchat),
                     contentDescription = null
                 )
-            }*/
+            },*/
             confirmButton = {
                 TextButton(onClick = {
                     showNotificationDialog.value = false
@@ -43,3 +43,9 @@ fun FirebaseMessagingNotificationPermissionDialog(
         )
     }
 }
+/*icon = {
+    Icon(
+        painterResource(id = R.drawable.playstore),
+        contentDescription = null
+    )
+},*/

@@ -56,7 +56,8 @@ fun FirebaseMessagingScreen() {
         verticalArrangement = Arrangement.spacedBy(20.dp, Alignment.CenterVertically),
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
-        Text(text = "Hello, main screen", color = Color.Black, fontSize = 20.sp, fontStyle = FontStyle.Italic)
+        Text(text = "Hello, main screen", color = Color.Black,
+            fontSize = 30.sp, fontStyle = FontStyle.Italic)
     }
 }
 @RequiresApi(Build.VERSION_CODES.TIRAMISU)

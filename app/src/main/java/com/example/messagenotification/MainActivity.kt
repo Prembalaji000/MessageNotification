@@ -8,6 +8,8 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.annotation.RequiresApi
+import androidx.compose.runtime.Composable
+import androidx.compose.ui.tooling.preview.Preview
 import com.example.messagenotification.View.FirebaseMessagingScreen
 import com.example.messagenotification.ui.theme.MessageNotificationTheme
 import com.google.android.gms.tasks.OnCompleteListener
@@ -19,7 +21,7 @@ class MainActivity : ComponentActivity() {
 
         FirebaseMessaging.getInstance().token.addOnCompleteListener(OnCompleteListener { task ->
             if (!task.isSuccessful){
-                Log.w("Failed", "fetching token registration token failed", task.exception)
+                Log.w("Failed", "fetching token registration token failed ", task.exception)
                 return@OnCompleteListener
             }
             val token = task.result
@@ -33,5 +35,13 @@ class MainActivity : ComponentActivity() {
                 FirebaseMessagingScreen()
             }
         }
+    }
+}
+@RequiresApi(Build.VERSION_CODES.TIRAMISU)
+@Preview(showBackground = true)
+@Composable
+fun MainScreenPreview(){
+    MessageNotificationTheme {
+        FirebaseMessagingScreen()
     }
 }
